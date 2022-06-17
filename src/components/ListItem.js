@@ -5,7 +5,11 @@ const ListItem = ({favourite}) => {
 
     return (
         <>
-        <li> {favourite.displayName} </li>
+        <h4>{favourite.displayName}</h4>
+        <h4><i>{favourite.role.displayName}</i></h4>
+        <hr></hr>
+        <p>{favourite.description}</p>
+        <hr></hr>
         </>
     )
 }
