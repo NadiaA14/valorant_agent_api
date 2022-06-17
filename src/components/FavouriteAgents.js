@@ -1,22 +1,19 @@
-// import React from "react";
+import React from "react";
+import ListItem from "./ListItem";
 
-// const FavouriteAgents = ({agents, onAgentSelected}) => {
-  
-//   const favouriteAgents = agents.filter(agent => agent.isFavourite)
+const FavouriteList = ({favourites}) => {
 
-//   return (
-//     <>
-//     <h3>Favourite Agents:</h3>
-//     <ul>
-//       {favouriteAgents.map(agent =>
-//         return (
-//           <li key={agent.data.displayName}>
-//           <button onClick={() => onAgentSelected(agent.data.displayName)}>{agent.data.displayName}</button>
-//           </li>
-//         ))}
-//     </ul>
-//     </>
-//   )
-// }
+    const getFavourites = favourites.map((favourite, index) => {
+        return <h4><ListItem favourite={favourite} key={index} /></h4>
+    })
+    
 
-// export default FavouriteAgents;
+    return (
+        <>
+        <h4>Favourites:</h4>
+        {getFavourites}
+        </>
+    )
+}
+
+export default FavouriteList;

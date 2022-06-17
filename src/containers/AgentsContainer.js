@@ -2,7 +2,6 @@ import { useState, useEffect} from 'react'
 import AgentSelector from '../components/AgentSelector'
 import Agent from '../components/Agent'
 import FavouriteAgents from '../components/FavouriteAgents'
-import ListItem from '../components/ListItem'
 
 const AgentsContainer = () => {
     const [agents, setAgents] = useState([])
@@ -16,7 +15,7 @@ const AgentsContainer = () => {
     const getAgents = () => {
         fetch(`https://valorant-api.com/v1/agents`)
         .then(res => res.json())
-        .then(agentsData => setAgents(agentsData.data))
+        .then(agents => setAgents(agents.data))
     }
 
     const addFavouriteAgent = (agent) => {
