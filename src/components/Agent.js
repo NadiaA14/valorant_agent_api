@@ -11,7 +11,7 @@ const Agent = ({agent, addFavouriteAgent}) => {
         <h4> {agent.displayName} </h4>
         <h4> <i>{agent.role.displayName} </i> </h4>
         <p> {agent.description} </p>
-        <img src={agent.displayIcon} alt={`Icon of ${agent.displayName}`}></img>
+        <img src={agent.bustPortrait} alt={`Icon of ${agent.displayName}`}></img>
         <hr></hr>
         <button onClick={handleClick}> Add to Favourites </button>
         </>
